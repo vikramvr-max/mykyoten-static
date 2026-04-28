@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pillar-guide-detail | MyKyoten</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="https://mykyoten.com/pillar-guide-detail">
+  <meta property="og:title" content="pillar-guide-detail | MyKyoten">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://mykyoten.com/pillar-guide-detail">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"pillar-guide-detail","description":"","author":{"@type":"Organization","name":"MyKyoten"},"publisher":{"@type":"Organization","name":"MyKyoten","url":"https://mykyoten.com"},"url":"https://mykyoten.com/pillar-guide-detail","datePublished":"2025-01-01","dateModified":"2026-04-28","mainEntityOfPage":"https://mykyoten.com/pillar-guide-detail"}</script>
+</head>
+<body>
+  <header>
+    <a href="https://mykyoten.com">MyKyoten</a>
+  </header>
+  <main>
+    <h1>pillar-guide-detail</h1>
+    
+    <section>
+      <p>import React, from &quot;react&quot;; import from &quot;react-router-dom&quot;; import from &quot;lucide-react&quot;; import ScenarioMatcherModal from &quot;@/components/calculators/ScenarioMatcherModal&quot;; import from &quot;react-helmet-async&quot;; import from &quot;@/data/pillar_guides&quot;; import from &quot;@/utils/selectRelatedGuides&quot;; import from &quot;@/lib/seo-schemas&quot;; import Seo from &quot;@/components/Seo&quot;; import Navbar from &quot;@/components/home/Navbar&quot;; import Footer from &quot;@/components/home/Footer&quot;; import GuideEmailCaptureBlock from &quot;@/components/guides/GuideEmailCaptureBlock&quot;; import GuideCTA from &quot;@/components/guides/GuideCTA&quot;; import CalculatorWrapper from &quot;@/components/calculators/CalculatorWrapper&quot;; import from &quot;@/config/guideCalculatorMap&quot;; import from &quot;@/components/ui/badge&quot;; import from &quot;@/components/ui/progress&quot;; import from &quot;@/hooks/use-mobile&quot;; import from &quot;@/lib/utils&quot;; /** Generate a stable anchor ID from heading text */ function toAnchorId(heading: string): string /** Build TOC entries from sections */ function buildToc(sections: []) )); } // Helper for timing label (shared with MicroguideDetail) function getTimingLabel(g: any): string export default function PillarGuideDetail() = useParams (); const = useLocation(); const guide = slug ? PILLAR_GUIDES[slug] : undefined; const isMobile = useIsMobile(); const [activeId, setActiveId] = useState (&quot;&quot;); const [scrollProgress, setScrollProgress] = useState(0); const [mobileTocOpen, setMobileTocOpen] = useState(false); const [ctaModalOpen, setCtaModalOpen] = useState(false); const [ctaTriggerType, setCtaTriggerType] = useState (&quot;top_cta&quot;); const articleRef = useRef (null); useEffect(() =&gt; , [pathname]); const toc = useMemo(() =&gt; (guide ? buildToc(guide.sections) : []), [guide]); // Scroll progress + active section tracking const handleScroll = useCallback(() =&gt; , [toc]); useEffect(() =&gt; ); return () =&gt; window.removeEventListener(&quot;scroll&quot;, handleScroll); }, [handleScroll]); const related = useMemo(() =&gt; , [guide]); if (!guide) const stripWarningMarker = (text: string) =&gt; text .replace(/\[warning box\]\s*/gi, &quot;&quot;) .replace(/\[warning\]\s*/gi, &quot;&quot;) .replace(/^\s*warning\s*[:\-–-]?\s*/i, &quot;&quot;) .trim(); const contentIsWarning = (text: string) =&gt; ; const headingIsWarning = (h?: string) =&gt; (h || &quot;&quot;).toLowerCase().includes(&quot;warning&quot;); /** Detect whether section content mentions deadlines, risks, or restrictions */ const INLINE_CTA_PATTERN = /\b(14[- ]day|30[- ]day|90[- ]day|within \d+ days?|\d+ days?|deadline|revoc|penalt|fine|compliance|violation|non-compliance|restrict|permission required|work limit|28[- ]hour|not permitted|without permission|risk of|denial|rejected|revoked|forfeited)\b/i; const seoTitle = guide.metaTitle || `$ | MyKyoten`; const seoDescription = guide.metaDescription || guide.summary; const canonicalUrl = `https://mykyoten.com/guides/$ `; const articleSchema = generateArticleSchema( ); const breadcrumbSchema = generateBreadcrumbSchema([ , , , ]); const calculatorType = getCalculatorForGuide(guide.slug); console.log(&quot;DEBUG slug:&quot;, guide.slug); return ( &lt;&gt; )} )} ← All Guides Last verified: )} Not sure what applies to your situation? Get your exact deadlines and requirements based on your situation. } className=&quot;self-start sm:self-center flex-shrink-0 rounded-lg bg-amber-500 hover:bg-amber-400 text-white font-semibold px-5 py-2.5 text-sm transition-colors whitespace-nowrap&quot; &gt; Check your situation → )} className=&quot;flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors w-full rounded-lg p-3&quot; style= } &gt; table of contents className=&quot;text-sm text-muted-foreground hover:text-foreground transition-colors&quot; &gt; ))} )} )} ))} )} } className=&quot;text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer underline underline-offset-2&quot; &gt; Check how this applies to your situation → ) : null; if (isWarnByHeading || hasMarker) )} Caution ); } return ( )} )} )} ))} )} )} )} ); })} )} Check when this applies ); })} View all guides )} Last updated: ← Back to All Guides ))} )} setCtaModalOpen(false)} guideSlug= triggerType= /&gt; ); }</p>
+    </section>
+  </main>
+  <footer>
+    <p>MyKyoten &mdash; Life intelligence for foreigners in Japan. <a href="https://mykyoten.com">mykyoten.com</a></p>
+  </footer>
+</body>
+</html>

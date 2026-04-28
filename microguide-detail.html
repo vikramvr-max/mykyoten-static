@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>microguide-detail | MyKyoten</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="https://mykyoten.com/microguide-detail">
+  <meta property="og:title" content="microguide-detail | MyKyoten">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://mykyoten.com/microguide-detail">
+  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"microguide-detail","description":"","author":{"@type":"Organization","name":"MyKyoten"},"publisher":{"@type":"Organization","name":"MyKyoten","url":"https://mykyoten.com"},"url":"https://mykyoten.com/microguide-detail","datePublished":"2025-01-01","dateModified":"2026-04-28","mainEntityOfPage":"https://mykyoten.com/microguide-detail"}</script>
+</head>
+<body>
+  <header>
+    <a href="https://mykyoten.com">MyKyoten</a>
+  </header>
+  <main>
+    <h1>microguide-detail</h1>
+    
+    <section>
+      <p>import React, from &quot;react&quot;; import from &quot;react-router-dom&quot;; import from &quot;lucide-react&quot;; import from &quot;@/components/ui/button&quot;; import from &quot;react-helmet-async&quot;; import from &quot;../../data/micro_guides&quot;; import from &quot;../../utils/selectRelatedGuides&quot;; import from &quot;../../lib/seo-schemas&quot;; import Seo from &quot;../../components/Seo&quot;; import Navbar from &quot;../../components/home/Navbar&quot;; import Footer from &quot;../../components/home/Footer&quot;; import GuideEmailCaptureBlock from &quot;../../components/guides/GuideEmailCaptureBlock&quot;; import GuideCTA from &quot;../../components/guides/GuideCTA&quot;; import ScenarioMatcherModal from &quot;../../components/calculators/ScenarioMatcherModal&quot;; /** * MicroguideDetail.tsx - Updated for visual overhaul * * Layout order: * 1) Hero (none for micro) / Title * 2) Key Takeaways * 3) Primary CTA * 4) Quick Fix (if present) * 5) Main content with visual rhythm * 6) Email capture (single instance) * 7) Related Guides (max 3) * 8) Bottom CTA * 9) Trust footer */ export default function MicroguideDetail() = useParams (); const = useLocation(); const guide = slug ? MICRO_GUIDES[slug] : undefined; // Scroll to top on route change useEffect(() =&gt; , [pathname]); const related = useMemo(() =&gt; , [guide]); if (!guide) const isQuickFix = (h?: string) =&gt; (h || &quot;&quot;).toLowerCase().includes(&quot;quick fix&quot;); const isEdgeCase = (h?: string) =&gt; (h || &quot;&quot;).toLowerCase().includes(&quot;edge case&quot;); const headingIsWarning = (h?: string) =&gt; (h || &quot;&quot;).toLowerCase().includes(&quot;warning&quot;); const sections = guide.sections || []; const quickFixIndex = sections.findIndex((s) =&gt; isQuickFix(s.heading)); const quickFix = quickFixIndex &gt;= 0 ? sections[quickFixIndex] : null; const bodySections = quickFixIndex &gt;= 0 ? sections.filter((_, i) =&gt; i !== quickFixIndex) : sections; const stripWarningMarker = (text: string) =&gt; ; const contentIsWarning = (text: string) =&gt; ; // Helper for timing label const getTimingLabel = (g: any): string =&gt; ; const seoTitle = `$ | MyKyoten`; const seoDescription = guide.metaDescription || guide.summary || &quot;Practical guidance for life in Japan.&quot;; const canonicalUrl = `https://mykyoten.com/guides/$ `; const articleSchema = generateArticleSchema( ); const breadcrumbSchema = generateBreadcrumbSchema([ , , , ]); return ( &lt;&gt; )} )} ← All Guides Last verified: )} )} ))} )} )} ); } const cautionText = blocks.length &gt; 0 ? blocks[blocks.length - 1] : cleanedAll; const normalText = blocks.length &gt; 1 ? blocks.slice(0, -1).join(&quot;\n\n&quot;) : &quot;&quot;; return ( )} )} Caution ); } return ( )} ); })} )} Check when this applies ); })} View all guides )} Last updated: ← Back to All Guides ); }</p>
+    </section>
+  </main>
+  <footer>
+    <p>MyKyoten &mdash; Life intelligence for foreigners in Japan. <a href="https://mykyoten.com">mykyoten.com</a></p>
+  </footer>
+</body>
+</html>
